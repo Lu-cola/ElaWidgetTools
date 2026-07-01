@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug ElaWidgetToolsExample",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ninja-qt662-debug/ElaWidgetToolsExample/ElaWidgetToolsExample.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "console": "externalTerminal"
+        }
+    ]
+}

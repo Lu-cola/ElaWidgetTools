@@ -1,0 +1,136 @@
+{
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 19,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "default",
+      "displayName": "默认配置",
+      "description": "使用 Ninja + Qt 6.6.2 的默认配置",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "installDir": "${sourceDir}/build/${presetName}/Install",
+      "cacheVariables": {
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl",
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.6.2/msvc2019_64",
+        "QT_SDK_DIR": "C:/Qt/6.6.2/msvc2019_64"
+      }
+    },
+    {
+      "name": "ninja-qt662",
+      "displayName": "Ninja + Qt 6.6.2",
+      "description": "使用 Ninja 生成器配合 Qt 6.6.2 (MSVC 2019 版)",
+      "inherits": "default"
+    },
+    {
+      "name": "ninja-qt662-debug",
+      "displayName": "Ninja + Qt 6.6.2 (Debug)",
+      "description": "Debug 构建模式",
+      "inherits": "ninja-qt662",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "ninja-qt662-release",
+      "displayName": "Ninja + Qt 6.6.2 (Release)",
+      "description": "Release 构建模式",
+      "inherits": "ninja-qt662",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "ninja-qt662-relwithdebinfo",
+      "displayName": "Ninja + Qt 6.6.2 (RelWithDebInfo)",
+      "description": "带调试信息的 Release 构建模式",
+      "inherits": "ninja-qt662",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo"
+      }
+    },
+    {
+      "name": "ninja-qt662-minsizerel",
+      "displayName": "Ninja + Qt 6.6.2 (MinSizeRel)",
+      "description": "最小体积 Release 构建模式",
+      "inherits": "ninja-qt662",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "MinSizeRel"
+      }
+    },
+    {
+      "name": "ninja-qt5152",
+      "displayName": "Ninja + Qt 5.15.2",
+      "description": "使用 Ninja 生成器配合 Qt 5.15.2",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "installDir": "${sourceDir}/build/${presetName}/Install",
+      "cacheVariables": {
+        "CMAKE_CXX_STANDARD": "17",
+        "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+        "CMAKE_C_COMPILER": "cl",
+        "CMAKE_CXX_COMPILER": "cl",
+        "CMAKE_PREFIX_PATH": "C:/Qt/5.15.2/msvc2019_64",
+        "QT_SDK_DIR": "C:/Qt/5.15.2/msvc2019_64",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      }
+    },
+    {
+      "name": "ninja-qt5152-debug",
+      "displayName": "Ninja + Qt 5.15.2 (Debug)",
+      "description": "Debug 构建模式 (Qt 5.15.2)",
+      "inherits": "ninja-qt5152",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "ninja-qt5152-release",
+      "displayName": "Ninja + Qt 5.15.2 (Release)",
+      "description": "Release 构建模式 (Qt 5.15.2)",
+      "inherits": "ninja-qt5152",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "default-build",
+      "displayName": "默认构建",
+      "description": "构建默认配置",
+      "configurePreset": "default"
+    },
+    {
+      "name": "ninja-qt662-debug-build",
+      "displayName": "Debug 构建 (Qt 6.6.2)",
+      "description": "构建 Debug 版本",
+      "configurePreset": "ninja-qt662-debug"
+    },
+    {
+      "name": "ninja-qt662-release-build",
+      "displayName": "Release 构建 (Qt 6.6.2)",
+      "description": "构建 Release 版本",
+      "configurePreset": "ninja-qt662-release"
+    },
+    {
+      "name": "ninja-qt5152-debug-build",
+      "displayName": "Debug 构建 (Qt 5.15.2)",
+      "description": "构建 Debug 版本 (Qt 5.15.2)",
+      "configurePreset": "ninja-qt5152-debug"
+    },
+    {
+      "name": "ninja-qt5152-release-build",
+      "displayName": "Release 构建 (Qt 5.15.2)",
+      "description": "构建 Release 版本 (Qt 5.15.2)",
+      "configurePreset": "ninja-qt5152-release"
+    }
+  ]
+}
