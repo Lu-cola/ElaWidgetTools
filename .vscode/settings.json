@@ -1,0 +1,29 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+    },
+    "cmake.debugConfig": {
+        "visualizerFile": "${workspaceFolder}/qt6.natvis",
+        "symbolSearchPath": "C:/Qt/6.6.2/msvc2019_64/bin",
+        "sourceFileMap": {
+            "C:/Qt/6.6.2/msvc2019_64/include": "C:/Qt/6.6.2/Src/qtbase/src",
+            "c:\\Users\\qt\\work\\qt": "C:/Qt/6.6.2/Src"
+        }
+    },
+    "clangd.arguments": [
+        "--background-index",
+        "--header-insertion=never",
+        "--completion-style=detailed",
+        "--function-arg-placeholders=false",
+        "--log=verbose",
+        "--compile-commands-dir=${workspaceFolder}/build/ninja-qt662-debug",
+        "--query-driver=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe",
+        "--query-driver=C:/Qt/6.6.2/msvc2019_64/bin/moc.exe",
+        "--query-driver=C:/Qt/6.6.2/msvc2019_64/bin/uic.exe",
+        "--query-driver=C:/Qt/6.6.2/msvc2019_64/bin/rcc.exe"
+    ],
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.errorSquiggles": "disabled"
+}
