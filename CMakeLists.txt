@@ -38,6 +38,7 @@ endif ()
 
 add_subdirectory(ElaWidgetTools)
 add_subdirectory(ElaWidgetToolsExample)
+add_subdirectory(ElaWidgetToolsDemo)
 
 if (${QT_VERSION} VERSION_LESS 6.1.0)
     set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.ElaWidgetTools)
